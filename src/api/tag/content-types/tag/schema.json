@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tags",
+  "info": {
+    "singularName": "tag",
+    "pluralName": "tags",
+    "displayName": "Tag"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "value": {
+      "type": "string"
+    },
+    "answers": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::answer.answer",
+      "mappedBy": "tags"
+    },
+    "levels": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::level.level",
+      "mappedBy": "tags"
+    },
+    "questions": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::question.question",
+      "mappedBy": "tag"
+    }
+  }
+}

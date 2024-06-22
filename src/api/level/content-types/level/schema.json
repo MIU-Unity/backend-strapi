@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "levels",
+  "info": {
+    "singularName": "level",
+    "pluralName": "levels",
+    "displayName": "Level"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "questions": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::question.question",
+      "inversedBy": "levels"
+    },
+    "tags": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::tag.tag",
+      "inversedBy": "levels"
+    }
+  }
+}

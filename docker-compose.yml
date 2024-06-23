@@ -2,7 +2,7 @@ services:
   strapi:
     container_name: strapi
     build:
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.prod
       context: .
     image: strapi:latest
     restart: unless-stopped
